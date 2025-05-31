@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smart Quiz & Weather</title>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+
+    <div class="video-background">
+      <video autoplay muted loop>
+        <source src="https://player.vimeo.com/external/195913085.sd.mp4?s=7c12c1c2b0a8a08e6d5d5b4b4b4b4b4b&profile_id=164" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="rain-fallback" id="rainFallback"></div>
+    <div class="overlay"></div>
+    <div class="thunder-flash" id="thunderFlash"></div>
+    <div class="thunder-indicator" id="thunderIndicator">⚡ Thunder</div>
+
+    <div class="container">
+      <div class="header">
+        <h1> Smart Quiz & Weather 🌦</h1>
+        <p>
+          Test your knowledge and check the Weather
+        </p>
+      </div>
+
+
+      <div class="quiz-section">
+        <h2 class="section-title">
+          <span>🎯</span>
+          <span>Challenge Yourself</span>
+        </h2>
+        <div id="quizContainer"></div>
+        <div class="button-container">
+          <button class="btn btn-primary" onclick="submitQuiz()">Submit</button>
+          <button class="btn btn-secondary" onclick="loadNewQuiz()">New Quiz</button>
+        </div>
+        <div id="quizResult" class="result"></div>
+      </div>
+
+      <div class="weather-section">
+        <div class="weather-content">
+          <h2 class="section-title" style="color: white;">
+            <span>🌍</span>
+            <span>Your Weather Now</span>
+          </h2>
+          <div id="weatherInfo" class="weather-info">
+            <div class="loading"></div>
+            <p>Fetching Location and Weather</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
